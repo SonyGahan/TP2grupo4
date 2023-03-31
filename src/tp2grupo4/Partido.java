@@ -29,7 +29,7 @@ public class Partido {
     }
     
     
-     //Getters and Setters
+    //Getters and Setters
     public int getIdPartido() {
         return idPartido;
     }

@@ -136,7 +136,7 @@ public class ListaParticipantes {
                 // llama al metodo add para grabar el equipo en la lista en memoria
                 //this.addParticipante(participante);
             }
-            //closes the scanner
+            //close the scanner
         } catch (IOException ex) {
                 System.out.println("Mensaje: " + ex.getMessage());
         }       

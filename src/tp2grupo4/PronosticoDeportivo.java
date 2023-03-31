@@ -19,7 +19,7 @@ public class PronosticoDeportivo {
         if (eq != null) {
             System.out.println (eq);
         } else {
-            System.out.println ("No se encontrÃ³ el equipo...");
+            System.out.println ("No se encontro el equipo...");
         }
     }   
 }
