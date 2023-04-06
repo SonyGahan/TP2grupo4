@@ -1,4 +1,3 @@
-
 package tp2grupo4;
 
 import java.io.File;
@@ -12,6 +11,7 @@ public class ListaParticipantes {
    //Atributos
     private List<Participante> participantes;
     private String participantesCSV;
+    
     
     //Metodos
     
@@ -46,11 +46,11 @@ public class ListaParticipantes {
     
     
     // add y remove elementos
-    public void addParticipante(Participante e) {
-        this.participantes.add(e);
+    public void addParticipante(Participante p) {
+        this.participantes.add(p);
     }
-    public void removeParticipante(Participante e) {
-        this.participantes.remove(e);
+    public void removeParticipante(Participante p) {
+        this.participantes.remove(p);
     }
     
     
@@ -128,13 +128,12 @@ public class ListaParticipantes {
                 //convertir un string a un entero;
                 int idParticipante = Integer.parseInt(vectorParticipante[0]);
                 String nombre = vectorParticipante[1];
-                //ListaPronosticos pronosticos = vectorParticipante[2];
-                int puntaje = Integer.parseInt(vectorParticipante[3]);
+                int puntaje = Integer.parseInt(vectorParticipante[2]);
                 // crea el objeto en memoria
-                //participante = new Participante(idParticipante, nombre, pronosticos, );
+                participante = new Participante(idParticipante, nombre, puntaje);
                 
                 // llama al metodo add para grabar el equipo en la lista en memoria
-                //this.addParticipante(participante);
+                this.addParticipante(participante);
             }
             //close the scanner
         } catch (IOException ex) {

@@ -13,7 +13,8 @@ public class ListaPartidos {
     private List<Partido> partidos;
     private String partidosCSV;
     
-    //Metodos
+    
+//Metodos
     
     //Constructor 
     public ListaPartidos(List<Partido> partidos, String partidosCSV) {
@@ -45,11 +46,27 @@ public class ListaPartidos {
     }
     
     // add y remove elementos
-    public void addEquipo(Partido e) {
-        this.partidos.add(e);
+    public void addEquipo(Partido p) {
+        this.partidos.add(p);
     }
-    public void removeEquipo(Partido e) {
-        this.partidos.remove(e);
+    public void removeEquipo(Partido p) {
+        this.partidos.remove(p);
+    }
+    
+    
+    //ToString - revisar
+    @Override
+    public String toString() {
+        return "ListaPartidos{" + "partidos=" + partidos + ", partidosCSV=" + partidosCSV + '}';
+    }
+    
+    
+    public String listar() {
+        String lista = "";
+        for (Partido partido: partidos) {
+            lista += "\n" + partido;
+        }           
+        return lista;
     }
     
     
@@ -80,20 +97,7 @@ public class ListaPartidos {
         return encontrado;
     }
     
-    //ToString - revisar
-    @Override
-    public String toString() {
-        return "ListaPartidos{" + "partidos=" + partidos + ", partidosCSV=" + partidosCSV + '}';
-    }
     
-    
-    public String listar() {
-        String lista = "";
-        for (Partido partido: partidos) {
-            lista += "\n" + partido;
-        }           
-        return lista;
-    }
     
     // cargar desde el archivo
     public void cargarDeArchivo() {
@@ -126,15 +130,15 @@ public class ListaPartidos {
                 // graba el partido en memoria - HAY PROBLEMAS PARA ALMACENAR LOS DATOS EN EL VECTOR!
                 //convertir un string a un entero;
                 int idPartido = Integer.parseInt(vectorPartido[0]);
-                //Equipo equipo1 = vectorPartido[1];
-                //Equipo equipo2 = vectorPartido[2];
+                int idEquipo1 = Integer.parseInt(vectorPartido[1]);
+                int idEquipo2 = Integer.parseInt(vectorPartido[2]);
                 int golesEquipo1 = Integer.parseInt(vectorPartido[3]);
                 int golesEquipo2 = Integer.parseInt(vectorPartido[4]);
                 // crea el objeto en memoria
-                //partido = new Partido(idPartido, equipo1, equipo2, golesEquipo1, golesEquipo2);
+                partido = new Partido(idPartido, idEquipo1, idEquipo2, golesEquipo1, golesEquipo2);
                 
                 // llama al metodo add para grabar el partido en la lista en memoria
-               // this.addPartido(partido);
+               this.addPartido(partido);
             }
             //closes the scanner
         } catch (IOException ex) {

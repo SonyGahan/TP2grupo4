@@ -3,36 +3,40 @@ package tp2grupo4;
 
 public class Participante {
     //Atributos
-    private int idParticipante;
+    private Integer idParticipante;
     private String nombre;
     private ListaPronosticos pronosticos;
     private int puntaje;
     
-    //Metodos
-    
-    
-    //Constructor 
-    public Participante(int idParticipante, String nombre, ListaPronosticos pronosticos, int puntaje) {
+    //Constructor
+    public Participante(Integer idParticipante, String nombre, ListaPronosticos pronosticos, int puntaje) {
         this.idParticipante = idParticipante;
         this.nombre = nombre;
         this.pronosticos = pronosticos;
         this.puntaje = puntaje;
     }
     
+    public Participante(Integer idParticipante, String nombre, int puntaje) {
+        this.idParticipante = idParticipante;
+        this.nombre = nombre;
+        this.pronosticos = new ListaPronosticos();
+        this.puntaje = puntaje;
+    }
+
     public Participante() {
-        this.idParticipante = 0;
+        this.idParticipante = null;
         this.nombre = null;
-        this.pronosticos = null;
-        this.puntaje = 0;  
+        this.pronosticos = new ListaPronosticos();
+        this.puntaje = 0;
     }
     
     
     //Getters and Setters
-    public int getIdParticipante() {
+    public Integer getIdParticipante() {
         return idParticipante;
     }
 
-    public void setIdParticipante(int idParticipante) {
+    public void setIdParticipante(Integer idParticipante) {
         this.idParticipante = idParticipante;
     }
 
@@ -52,21 +56,31 @@ public class Participante {
         this.pronosticos = pronosticos;
     }
 
-    public int getPuntaje() {
-        return puntaje;
-    }
+    //public int getPuntaje() {
+    //    return puntaje;
+    //}
 
     public void setPuntaje(int puntaje) {
         this.puntaje = puntaje;
     }
     
-    //toString
-    @Override
-    public String toString() {
-        return "Participante{" + "idParticipante=" + idParticipante + ", nombre=" + nombre + ", pronosticos=" + pronosticos + ", puntaje=" + puntaje + '}';
+    
+    // retorna el puntaje del participando calculando los valores de los pronosticos
+    public int getPuntaje() {
+        // Para ver el puntaje debo recorrer los pronosticos y ver el puntaje
+        // de cada uno y acumularlo. Debo devolver el total.
+        int puntaje = 0;
+        // el primer mensaje corresponde al atributo pronosticos de parrticipante
+        // el segundo mensaje corresponde a la lista que tiene el atributo pronosticos
+        // de esa lista se obtiene cada pronostico y se saca el puntaje acumulandolo en 
+        // la variable puntaje
+        for (Pronostico p : this.getPronosticos().getPronosticos()) {
+            puntaje += p.getPuntaje();
+        }
+        return puntaje;
     }
     
     
-    
-    //Falta el procedimiento cargarPronostico()
 }
+
+
