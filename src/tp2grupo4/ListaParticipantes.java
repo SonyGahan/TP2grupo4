@@ -55,7 +55,7 @@ public class ListaParticipantes {
     
     
     /***
-     * Este metodo devuelve un Participante (o null) buscandolo por idParticipante
+     * Este metodo devuelve un objeto Participante (o null) buscandolo por idParticipante
      * @param idParticipante Identificador del participante deseado
      * @return Objeto Participante (o null si no se encuentra)
      */
@@ -140,7 +140,4 @@ public class ListaParticipantes {
                 System.out.println("Mensaje: " + ex.getMessage());
         }       
     }    
-    
-    
-    //Falta elprocedimiento void calcularPuntajes()
 }

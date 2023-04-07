@@ -51,7 +51,7 @@ public class ListaEquipos {
     }
     
     /***
-     * Este metodo devuelve un Equipo (o null) buscandolo por idEquipo
+     * Este metodo devuelve un objeto Equipo (o null) buscandolo por idEquipo
      * @param idEquipo Identificador del equipo deseado
      * @return Objeto Equipo (o null si no se encuentra)
      */

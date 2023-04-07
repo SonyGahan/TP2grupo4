@@ -181,7 +181,7 @@ public class ListaPronosticos {
                         equipo, // El Equipo que obtuvimos de la lista
                         partido, // El Partido que obtuvimos de la lista
                         readResultado, // El resultado que leimos del archivo,
-                        readidParticipante
+                        readidParticipante //El id leido del archivo
                 );
 
                 // llama al metodo add para grabar el equipo en la lista en memoria

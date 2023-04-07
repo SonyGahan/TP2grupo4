@@ -56,10 +56,6 @@ public class Participante {
         this.pronosticos = pronosticos;
     }
 
-    //public int getPuntaje() {
-    //    return puntaje;
-    //}
-
     public void setPuntaje(int puntaje) {
         this.puntaje = puntaje;
     }
@@ -78,9 +74,7 @@ public class Participante {
             puntaje += p.getPuntaje();
         }
         return puntaje;
-    }
-    
-    
+    }   
 }
 
 
