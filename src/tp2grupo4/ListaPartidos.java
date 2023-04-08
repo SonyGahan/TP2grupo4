@@ -129,7 +129,7 @@ public class ListaPartidos {
                 // guarda en un vector los elementos individuales
                 vectorPartido = datosPartido.split(",");   
                 
-                // graba el partido en memoria - HAY PROBLEMAS PARA ALMACENAR LOS DATOS EN EL VECTOR!
+                // graba el partido en memoria
                 //convertir un string a un entero;
                 int readidPartido = Integer.parseInt(vectorPartido[0]);
                 int readidEquipo1 = Integer.parseInt(vectorPartido[1]);
@@ -143,8 +143,8 @@ public class ListaPartidos {
                     // crea el objeto en memoria
                     partido = new Partido(
                             readidPartido, // El id leido del archivo
-                            equipo1, // El Equipo1 que obtuvimos de la lista
-                            equipo2, // El Equipo2 que obtuvimos de la lista
+                            equipo1, // El objeto Equipo1 que obtuvimos de la lista
+                            equipo2, // El objeto Equipo2 que obtuvimos de la lista
                             readgolesEquipo1, // Goles del equipo1 que leimos del archivo
                             readgolesEquipo2 // Goles del equipo2 que leimos del archivo
                     );

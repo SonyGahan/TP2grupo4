@@ -69,6 +69,18 @@ public class Partido {
     public void setGolesEquipo2(int golesEquipo2) {
         this.golesEquipo2 = golesEquipo2;
     }
+   
+    //procedimiento para determinar un resultado segun la cantidad de goles.
+    //Este resultado me servira para compararlo con el resultado pronostico de la clase Pronostico.
+    char resulPartido;
+    public void resultadoPartido(){
+        if (golesEquipo1 > golesEquipo2)
+            resulPartido =  'G';
+        else if (golesEquipo1 < golesEquipo2)
+            resulPartido =  'P';
+        else
+            resulPartido =  'E';
+    }
     
     
     //toString

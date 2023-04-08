@@ -1,6 +1,9 @@
 /*
  Para entrega 2 Grupo 4
             Creado por Sonia Pereira
+                       Diego Lascano
+                       Ernesto Floridia
+                       Fredy Muñoz
  */
 package tp2grupo4;
 

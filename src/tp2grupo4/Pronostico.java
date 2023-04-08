@@ -80,6 +80,24 @@ public class Pronostico {
     }
 
     
+    
+    // Metodo que devuelve 0 o 1 segun haya coincidencia o no, entre el resultado apostado y el resultado real del partido
+    // Si hay coincidencia hay 1 punto en esa apuesta, sino hay 0 puntos.
+    // Cada pronostico es una "apuesta" a que en un Partido determinado sale un cierto resultado (Gana, Pierde, Empata)
+    //Tengo que poder comparar el resultado del pronostico con el resultado del partido.
+    //Si coinciden guardo el valor 1, que se usara en el contador de la clase Prticipante, para calcular el valor total del puntaje.
+    int puntaje;
+    
+    
+    public int getPuntaje(){
+        if (resultado == resultadoPartido) //No logro definir como traer de la clase Partido la variable, resulPartido con su valor.
+            puntaje = 1;
+        else 
+            puntaje = 0;
+    }
+    
+    
+    
     //ToString
     @Override
     public String toString() {
